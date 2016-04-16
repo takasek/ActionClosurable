@@ -15,6 +15,9 @@
 		B61D45B61CBAB1AA00BCADB7 /* ActionClosurableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45B51CBAB1AA00BCADB7 /* ActionClosurableTests.swift */; };
 		B61D45C11CBB30D100BCADB7 /* ActionClosurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */; };
 		B61D45C71CBB45D000BCADB7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C61CBB45D000BCADB7 /* Extensions.swift */; };
+		B6554A2D1CC24F3D0060DC4B /* ActionClosurable.h in Headers */ = {isa = PBXBuildFile; fileRef = B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6554A311CC24F3D0060DC4B /* ActionClosurable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */; };
+		B6554A321CC24F3D0060DC4B /* ActionClosurable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +28,28 @@
 			remoteGlobalIDString = B61D459C1CBAB1AA00BCADB7;
 			remoteInfo = ActionClosurable;
 		};
+		B6554A2F1CC24F3D0060DC4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B61D45951CBAB1AA00BCADB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6554A291CC24F3D0060DC4B;
+			remoteInfo = ActionClosurable;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6554A361CC24F3D0060DC4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B6554A321CC24F3D0060DC4B /* ActionClosurable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B61C4A651CC21BD600B81849 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,13 +57,16 @@
 		B61C4A681CC21BD600B81849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B61C4A6A1CC21BD600B81849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B61C4A6B1CC21BD600B81849 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B61D459D1CBAB1AA00BCADB7 /* ActionClosurable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionClosurable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61D459D1CBAB1AA00BCADB7 /* ActionClosurable-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActionClosurable-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D45AC1CBAB1AA00BCADB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61D45B11CBAB1AA00BCADB7 /* ActionClosurableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionClosurableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D45B51CBAB1AA00BCADB7 /* ActionClosurableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionClosurableTests.swift; sourceTree = "<group>"; };
 		B61D45B71CBAB1AA00BCADB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionClosurable.swift; sourceTree = "<group>"; };
 		B61D45C61CBB45D000BCADB7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionClosurable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionClosurable.h; sourceTree = "<group>"; };
+		B6554A2E1CC24F3D0060DC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,10 +74,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6554A311CC24F3D0060DC4B /* ActionClosurable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B61D45AE1CBAB1AA00BCADB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6554A261CC24F3D0060DC4B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,6 +113,7 @@
 				B61C4A641CC21BD600B81849 /* Demo */,
 				B61D459F1CBAB1AA00BCADB7 /* ActionClosurable */,
 				B61D45B41CBAB1AA00BCADB7 /* ActionClosurableTests */,
+				B6554A2B1CC24F3D0060DC4B /* ActionClosurable */,
 				B61D459E1CBAB1AA00BCADB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,8 +121,9 @@
 		B61D459E1CBAB1AA00BCADB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B61D459D1CBAB1AA00BCADB7 /* ActionClosurable.app */,
+				B61D459D1CBAB1AA00BCADB7 /* ActionClosurable-Demo.app */,
 				B61D45B11CBAB1AA00BCADB7 /* ActionClosurableTests.xctest */,
+				B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,24 +147,46 @@
 			path = ActionClosurableTests;
 			sourceTree = "<group>";
 		};
+		B6554A2B1CC24F3D0060DC4B /* ActionClosurable */ = {
+			isa = PBXGroup;
+			children = (
+				B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */,
+				B6554A2E1CC24F3D0060DC4B /* Info.plist */,
+			);
+			path = ActionClosurable;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		B6554A271CC24F3D0060DC4B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6554A2D1CC24F3D0060DC4B /* ActionClosurable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		B61D459C1CBAB1AA00BCADB7 /* ActionClosurable */ = {
+		B61D459C1CBAB1AA00BCADB7 /* ActionClosurable-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B61D45BA1CBAB1AA00BCADB7 /* Build configuration list for PBXNativeTarget "ActionClosurable" */;
+			buildConfigurationList = B61D45BA1CBAB1AA00BCADB7 /* Build configuration list for PBXNativeTarget "ActionClosurable-Demo" */;
 			buildPhases = (
 				B61D45991CBAB1AA00BCADB7 /* Sources */,
 				B61D459A1CBAB1AA00BCADB7 /* Frameworks */,
 				B61D459B1CBAB1AA00BCADB7 /* Resources */,
+				B6554A361CC24F3D0060DC4B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B6554A301CC24F3D0060DC4B /* PBXTargetDependency */,
 			);
-			name = ActionClosurable;
+			name = "ActionClosurable-Demo";
 			productName = ActionClosurable;
-			productReference = B61D459D1CBAB1AA00BCADB7 /* ActionClosurable.app */;
+			productReference = B61D459D1CBAB1AA00BCADB7 /* ActionClosurable-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B61D45B01CBAB1AA00BCADB7 /* ActionClosurableTests */ = {
@@ -148,6 +207,24 @@
 			productReference = B61D45B11CBAB1AA00BCADB7 /* ActionClosurableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B6554A291CC24F3D0060DC4B /* ActionClosurable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6554A331CC24F3D0060DC4B /* Build configuration list for PBXNativeTarget "ActionClosurable" */;
+			buildPhases = (
+				B6554A251CC24F3D0060DC4B /* Sources */,
+				B6554A261CC24F3D0060DC4B /* Frameworks */,
+				B6554A271CC24F3D0060DC4B /* Headers */,
+				B6554A281CC24F3D0060DC4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActionClosurable;
+			productName = ActionClosurable;
+			productReference = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +242,9 @@
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = B61D459C1CBAB1AA00BCADB7;
 					};
+					B6554A291CC24F3D0060DC4B = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = B61D45981CBAB1AA00BCADB7 /* Build configuration list for PBXProject "ActionClosurable" */;
@@ -180,8 +260,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B61D459C1CBAB1AA00BCADB7 /* ActionClosurable */,
+				B61D459C1CBAB1AA00BCADB7 /* ActionClosurable-Demo */,
 				B61D45B01CBAB1AA00BCADB7 /* ActionClosurableTests */,
+				B6554A291CC24F3D0060DC4B /* ActionClosurable */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +279,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B61D45AF1CBAB1AA00BCADB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6554A281CC24F3D0060DC4B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,13 +314,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6554A251CC24F3D0060DC4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		B61D45B31CBAB1AA00BCADB7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B61D459C1CBAB1AA00BCADB7 /* ActionClosurable */;
+			target = B61D459C1CBAB1AA00BCADB7 /* ActionClosurable-Demo */;
 			targetProxy = B61D45B21CBAB1AA00BCADB7 /* PBXContainerItemProxy */;
+		};
+		B6554A301CC24F3D0060DC4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6554A291CC24F3D0060DC4B /* ActionClosurable */;
+			targetProxy = B6554A2F1CC24F3D0060DC4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -387,6 +487,44 @@
 			};
 			name = Release;
 		};
+		B6554A341CC24F3D0060DC4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ActionClosurable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = takasek.ActionClosurable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6554A351CC24F3D0060DC4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ActionClosurable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = takasek.ActionClosurable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,7 +537,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B61D45BA1CBAB1AA00BCADB7 /* Build configuration list for PBXNativeTarget "ActionClosurable" */ = {
+		B61D45BA1CBAB1AA00BCADB7 /* Build configuration list for PBXNativeTarget "ActionClosurable-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B61D45BB1CBAB1AA00BCADB7 /* Debug */,
@@ -416,6 +554,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B6554A331CC24F3D0060DC4B /* Build configuration list for PBXNativeTarget "ActionClosurable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6554A341CC24F3D0060DC4B /* Debug */,
+				B6554A351CC24F3D0060DC4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
