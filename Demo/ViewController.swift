@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     var button: UIButton? = UIButton(frame: CGRect(x: 0,y: 0,width: 100,height: 100))
     var gr: UITapGestureRecognizer? = UITapGestureRecognizer()
+    var timer: NSTimer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,16 @@ class ViewController: UIViewController {
             print("gesture!")
             $0.removeTarget(nil, action: nil)
             self!.gr = nil
+        }
+
+        var i = 5
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, userInfo: nil, repeats: true) { [weak self] timer in
+            print("timer", i)
+            i -= 1
+            if i <= 0 {
+                timer.invalidate()
+                self?.timer = nil
+            }
         }
     }
 }

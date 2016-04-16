@@ -20,7 +20,8 @@ private class GreenRoom {
     private var actors: [Any] = []
 }
 private var GreenRoomKey: UInt32 = 893
-private func register<T>(actor: Actor<T>, to object: AnyObject) {
+
+func register<T>(actor: Actor<T>, to object: AnyObject) {
     let room = objc_getAssociatedObject(object, &GreenRoomKey) as? GreenRoom ?? {
         let room = GreenRoom()
         objc_setAssociatedObject(object, &GreenRoomKey, room, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
