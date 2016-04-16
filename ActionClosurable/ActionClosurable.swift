@@ -31,11 +31,17 @@ func register<T>(actor: Actor<T>, to object: AnyObject) {
 }
 
 public protocol ActionClosurable {}
-extension ActionClosurable where Self: AnyObject {
-    func registerClosure<T>(closure: T -> Void, @noescape configure: (Actor<T>, Selector) -> Void) {
+public extension ActionClosurable where Self: AnyObject {
+    public func registerClosure(closure: Self -> Void, @noescape configure: (Actor<Self>, Selector) -> Void) {
         let actor = Actor(closure)
+        configure(actor, #selector(Actor<AnyObject>.act(_:)))
         register(actor, to: self)
-        configure(actor, #selector(Actor<T>.act(_:)))
+    }
+    public static func registerClosure(closure: Self -> Void, @noescape configure: (Actor<Self>, Selector) -> Self) -> Self {
+        let actor = Actor(closure)
+        let instance = configure(actor, #selector(Actor<AnyObject>.act(_:)))
+        register(actor, to: instance)
+        return instance
     }
 }
 
