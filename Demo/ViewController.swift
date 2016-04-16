@@ -9,13 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var button: UIButton? = UIButton(frame: CGRect(x: 0,y: 0,width: 100,height: 100))
+    var button: UIButton? = UIButton(frame: CGRect(x: 0,y: 70,width: 100,height: 100))
     var gr: UITapGestureRecognizer? = UITapGestureRecognizer()
     var timer: NSTimer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 20, height: 20), false, 0)
+        let contextImg = UIGraphicsGetCurrentContext()
+        CGContextSetRGBFillColor(contextImg,1,1,1,1)
+        CGContextFillRect(contextImg, CGRect(x: 0, y: 0, width: 20, height: 20))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(title: "title", style: .Plain, closure: { _ in
+                print("barButtonItem title")
+            }),
+            UIBarButtonItem(image: image, style: .Plain, closure: { _ in
+                print("barButtonItem image")
+            }),
+        ]
         button?.setTitle("button", forState: .Normal)
         button?.backgroundColor = UIColor.redColor()
         self.view.addSubview(button!)

@@ -34,6 +34,12 @@ extension ActionClosurable where Self: UIGestureRecognizer {
 }
 
 extension ActionClosurable where Self: UIBarButtonItem {
+    public init(title: String, style: UIBarButtonItemStyle, closure: Self -> Void) {
+        self.init()
+        self.title = title
+        self.style = style
+        self.onTap(closure)
+    }
     public init(image: UIImage?, style: UIBarButtonItemStyle, closure: Self -> Void) {
         self.init()
         self.image = image
