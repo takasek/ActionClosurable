@@ -13,11 +13,10 @@
 		B61C4A6F1CC21BD600B81849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61C4A691CC21BD600B81849 /* Main.storyboard */; };
 		B61C4A701CC21BD600B81849 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C4A6B1CC21BD600B81849 /* ViewController.swift */; };
 		B61D45B61CBAB1AA00BCADB7 /* ActionClosurableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45B51CBAB1AA00BCADB7 /* ActionClosurableTests.swift */; };
-		B61D45C11CBB30D100BCADB7 /* ActionClosurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */; };
-		B61D45C71CBB45D000BCADB7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C61CBB45D000BCADB7 /* Extensions.swift */; };
 		B6554A2D1CC24F3D0060DC4B /* ActionClosurable.h in Headers */ = {isa = PBXBuildFile; fileRef = B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6554A311CC24F3D0060DC4B /* ActionClosurable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */; };
 		B6554A321CC24F3D0060DC4B /* ActionClosurable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6554A3D1CC258010060DC4B /* ActionClosurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */; };
+		B6554A3E1CC258080060DC4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C61CBB45D000BCADB7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6554A311CC24F3D0060DC4B /* ActionClosurable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,9 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B61C4A6C1CC21BD600B81849 /* AppDelegate.swift in Sources */,
-				B61D45C11CBB30D100BCADB7 /* ActionClosurable.swift in Sources */,
 				B61C4A701CC21BD600B81849 /* ViewController.swift in Sources */,
-				B61D45C71CBB45D000BCADB7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6554A3D1CC258010060DC4B /* ActionClosurable.swift in Sources */,
+				B6554A3E1CC258080060DC4B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ActionClosurable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = takasek.ActionClosurable;
@@ -456,6 +455,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ActionClosurable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = takasek.ActionClosurable;
@@ -562,6 +562,7 @@
 				B6554A351CC24F3D0060DC4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ActionClosurable
 
 class ViewController: UIViewController {
     var button: UIButton? = UIButton(frame: CGRect(x: 0,y: 70,width: 100,height: 100))
