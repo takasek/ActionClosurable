@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
 
         var i = 5
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, userInfo: nil, repeats: true) { [weak self] timer in
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, repeats: true) { [weak self] timer in
             print("timer", i)
             i -= 1
             if i <= 0 {
