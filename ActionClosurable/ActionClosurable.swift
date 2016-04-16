@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 public class Actor<T> {
     @objc func act(sender: AnyObject) { closure(sender as! T) }
@@ -33,8 +34,11 @@ private func register<T>(closure: T -> Void, to object: AnyObject, @noescape con
     configure(actor, #selector(Actor<T>.act(_:)))
 }
 
-extension NSObject {
-    public func registerClosure<T>(closure: T -> Void, @noescape configure: (Actor<T>, Selector) -> Void) {
+public protocol ActionClosurable {}
+extension ActionClosurable where Self: AnyObject {
+    func registerClosure<T>(closure: T -> Void, @noescape configure: (Actor<T>, Selector) -> Void) {
         register(closure, to: self, configure: configure)
     }
 }
+
+extension NSObject: ActionClosurable {}

@@ -8,38 +8,39 @@
 
 import UIKit
 
-extension UIControl {
-    public func on(controlEvents: UIControlEvents, closure: UIControl -> Void) {
+extension ActionClosurable where Self: UIControl {
+    public func on(controlEvents: UIControlEvents, closure: Self -> Void) {
         registerClosure(closure) {
             self.addTarget($0, action: $1, forControlEvents: controlEvents)
         }
     }
 }
 
-extension UIButton {
-    public func onTap(closure: UIButton -> Void) {
+extension ActionClosurable where Self: UIButton {
+    public func onTap(closure: Self -> Void) {
         registerClosure(closure) {
             self.addTarget($0, action: $1, forControlEvents: .TouchUpInside)
         }
     }
 }
 
-extension UITapGestureRecognizer {
-    public func onGesture(closure: UITapGestureRecognizer -> Void) {
+
+extension ActionClosurable where Self: UIGestureRecognizer {
+    public func onGesture(closure: Self -> Void) {
         registerClosure(closure) {
             self.addTarget($0, action: $1)
         }
     }
 }
 
-extension UIBarButtonItem {
-    public convenience init(image: UIImage?, style: UIBarButtonItemStyle, closure: UIBarButtonItem -> Void) {
+extension ActionClosurable where Self: UIBarButtonItem {
+    public init(image: UIImage?, style: UIBarButtonItemStyle, closure: Self -> Void) {
         self.init()
         self.image = image
         self.style = style
         self.onTap(closure)
     }
-    public func onTap(closure: UIBarButtonItem -> Void) {
+    public func onTap(closure: Self -> Void) {
         registerClosure(closure) {
             self.target = $0
             self.action = $1
