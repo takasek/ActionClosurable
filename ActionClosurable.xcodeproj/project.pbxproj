@@ -7,27 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B61C4A6C1CC21BD600B81849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C4A651CC21BD600B81849 /* AppDelegate.swift */; };
-		B61C4A6D1CC21BD600B81849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B61C4A661CC21BD600B81849 /* Assets.xcassets */; };
-		B61C4A6E1CC21BD600B81849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61C4A671CC21BD600B81849 /* LaunchScreen.storyboard */; };
-		B61C4A6F1CC21BD600B81849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61C4A691CC21BD600B81849 /* Main.storyboard */; };
-		B61C4A701CC21BD600B81849 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61C4A6B1CC21BD600B81849 /* ViewController.swift */; };
 		B61D45B61CBAB1AA00BCADB7 /* ActionClosurableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45B51CBAB1AA00BCADB7 /* ActionClosurableTests.swift */; };
 		B6554A2D1CC24F3D0060DC4B /* ActionClosurable.h in Headers */ = {isa = PBXBuildFile; fileRef = B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6554A321CC24F3D0060DC4B /* ActionClosurable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6554A3D1CC258010060DC4B /* ActionClosurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */; };
 		B6554A3E1CC258080060DC4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C61CBB45D000BCADB7 /* Extensions.swift */; };
+		B6554A4E1CC25F320060DC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6554A4D1CC25F320060DC4B /* AppDelegate.swift */; };
+		B6554A501CC25F320060DC4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6554A4F1CC25F320060DC4B /* ViewController.swift */; };
+		B6554A531CC25F320060DC4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6554A511CC25F320060DC4B /* Main.storyboard */; };
+		B6554A551CC25F320060DC4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6554A541CC25F320060DC4B /* Assets.xcassets */; };
+		B6554A581CC25F320060DC4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6554A561CC25F320060DC4B /* LaunchScreen.storyboard */; };
+		B6554A631CC25F330060DC4B /* ActionClosurable_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6554A621CC25F330060DC4B /* ActionClosurable_DemoUITests.swift */; };
+		B6554A6B1CC25FFC0060DC4B /* ActionClosurable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */; };
+		B6554A6C1CC25FFC0060DC4B /* ActionClosurable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B61D45B21CBAB1AA00BCADB7 /* PBXContainerItemProxy */ = {
+		B6554A5F1CC25F330060DC4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B61D45951CBAB1AA00BCADB7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B61D459C1CBAB1AA00BCADB7;
-			remoteInfo = ActionClosurable;
+			remoteGlobalIDString = B6554A4A1CC25F320060DC4B;
+			remoteInfo = "ActionClosurable-Demo";
 		};
-		B6554A2F1CC24F3D0060DC4B /* PBXContainerItemProxy */ = {
+		B6554A6D1CC25FFC0060DC4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B61D45951CBAB1AA00BCADB7 /* Project object */;
 			proxyType = 1;
@@ -37,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B6554A361CC24F3D0060DC4B /* Embed Frameworks */ = {
+		B6554A6F1CC25FFC0060DC4B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6554A321CC24F3D0060DC4B /* ActionClosurable.framework in Embed Frameworks */,
+				B6554A6C1CC25FFC0060DC4B /* ActionClosurable.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,12 +53,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B61C4A651CC21BD600B81849 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B61C4A661CC21BD600B81849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B61C4A681CC21BD600B81849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B61C4A6A1CC21BD600B81849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B61C4A6B1CC21BD600B81849 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B61D459D1CBAB1AA00BCADB7 /* ActionClosurable-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActionClosurable-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D45AC1CBAB1AA00BCADB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61D45B11CBAB1AA00BCADB7 /* ActionClosurableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionClosurableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D45B51CBAB1AA00BCADB7 /* ActionClosurableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionClosurableTests.swift; sourceTree = "<group>"; };
@@ -65,17 +61,19 @@
 		B61D45C61CBB45D000BCADB7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionClosurable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionClosurable.h; sourceTree = "<group>"; };
-		B6554A2E1CC24F3D0060DC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6554A4B1CC25F320060DC4B /* ActionClosurable-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActionClosurable-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6554A4D1CC25F320060DC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B6554A4F1CC25F320060DC4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B6554A521CC25F320060DC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B6554A541CC25F320060DC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B6554A571CC25F320060DC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6554A591CC25F320060DC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6554A5E1CC25F330060DC4B /* ActionClosurable-DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ActionClosurable-DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6554A621CC25F330060DC4B /* ActionClosurable_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionClosurable_DemoUITests.swift; sourceTree = "<group>"; };
+		B6554A641CC25F330060DC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B61D459A1CBAB1AA00BCADB7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B61D45AE1CBAB1AA00BCADB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,28 +88,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6554A481CC25F320060DC4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6554A6B1CC25FFC0060DC4B /* ActionClosurable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6554A5B1CC25F330060DC4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B61C4A641CC21BD600B81849 /* Demo */ = {
-			isa = PBXGroup;
-			children = (
-				B61C4A651CC21BD600B81849 /* AppDelegate.swift */,
-				B61C4A661CC21BD600B81849 /* Assets.xcassets */,
-				B61C4A671CC21BD600B81849 /* LaunchScreen.storyboard */,
-				B61C4A691CC21BD600B81849 /* Main.storyboard */,
-				B61C4A6B1CC21BD600B81849 /* ViewController.swift */,
-			);
-			path = Demo;
-			sourceTree = "<group>";
-		};
 		B61D45941CBAB1AA00BCADB7 = {
 			isa = PBXGroup;
 			children = (
-				B61C4A641CC21BD600B81849 /* Demo */,
-				B61D459F1CBAB1AA00BCADB7 /* ActionClosurable */,
 				B61D45B41CBAB1AA00BCADB7 /* ActionClosurableTests */,
 				B6554A2B1CC24F3D0060DC4B /* ActionClosurable */,
+				B6554A4C1CC25F320060DC4B /* ActionClosurable-Demo */,
+				B6554A611CC25F330060DC4B /* ActionClosurable-DemoUITests */,
 				B61D459E1CBAB1AA00BCADB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,21 +120,12 @@
 		B61D459E1CBAB1AA00BCADB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B61D459D1CBAB1AA00BCADB7 /* ActionClosurable-Demo.app */,
 				B61D45B11CBAB1AA00BCADB7 /* ActionClosurableTests.xctest */,
 				B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */,
+				B6554A4B1CC25F320060DC4B /* ActionClosurable-Demo.app */,
+				B6554A5E1CC25F330060DC4B /* ActionClosurable-DemoUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B61D459F1CBAB1AA00BCADB7 /* ActionClosurable */ = {
-			isa = PBXGroup;
-			children = (
-				B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */,
-				B61D45C61CBB45D000BCADB7 /* Extensions.swift */,
-				B61D45AC1CBAB1AA00BCADB7 /* Info.plist */,
-			);
-			path = ActionClosurable;
 			sourceTree = "<group>";
 		};
 		B61D45B41CBAB1AA00BCADB7 /* ActionClosurableTests */ = {
@@ -148,10 +140,34 @@
 		B6554A2B1CC24F3D0060DC4B /* ActionClosurable */ = {
 			isa = PBXGroup;
 			children = (
+				B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */,
+				B61D45C61CBB45D000BCADB7 /* Extensions.swift */,
+				B61D45AC1CBAB1AA00BCADB7 /* Info.plist */,
 				B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */,
-				B6554A2E1CC24F3D0060DC4B /* Info.plist */,
 			);
 			path = ActionClosurable;
+			sourceTree = "<group>";
+		};
+		B6554A4C1CC25F320060DC4B /* ActionClosurable-Demo */ = {
+			isa = PBXGroup;
+			children = (
+				B6554A4D1CC25F320060DC4B /* AppDelegate.swift */,
+				B6554A4F1CC25F320060DC4B /* ViewController.swift */,
+				B6554A511CC25F320060DC4B /* Main.storyboard */,
+				B6554A541CC25F320060DC4B /* Assets.xcassets */,
+				B6554A561CC25F320060DC4B /* LaunchScreen.storyboard */,
+				B6554A591CC25F320060DC4B /* Info.plist */,
+			);
+			path = "ActionClosurable-Demo";
+			sourceTree = "<group>";
+		};
+		B6554A611CC25F330060DC4B /* ActionClosurable-DemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B6554A621CC25F330060DC4B /* ActionClosurable_DemoUITests.swift */,
+				B6554A641CC25F330060DC4B /* Info.plist */,
+			);
+			path = "ActionClosurable-DemoUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,25 +184,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B61D459C1CBAB1AA00BCADB7 /* ActionClosurable-Demo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B61D45BA1CBAB1AA00BCADB7 /* Build configuration list for PBXNativeTarget "ActionClosurable-Demo" */;
-			buildPhases = (
-				B61D45991CBAB1AA00BCADB7 /* Sources */,
-				B61D459A1CBAB1AA00BCADB7 /* Frameworks */,
-				B61D459B1CBAB1AA00BCADB7 /* Resources */,
-				B6554A361CC24F3D0060DC4B /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B6554A301CC24F3D0060DC4B /* PBXTargetDependency */,
-			);
-			name = "ActionClosurable-Demo";
-			productName = ActionClosurable;
-			productReference = B61D459D1CBAB1AA00BCADB7 /* ActionClosurable-Demo.app */;
-			productType = "com.apple.product-type.application";
-		};
 		B61D45B01CBAB1AA00BCADB7 /* ActionClosurableTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B61D45BD1CBAB1AA00BCADB7 /* Build configuration list for PBXNativeTarget "ActionClosurableTests" */;
@@ -198,7 +195,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B61D45B31CBAB1AA00BCADB7 /* PBXTargetDependency */,
 			);
 			name = ActionClosurableTests;
 			productName = ActionClosurableTests;
@@ -223,6 +219,43 @@
 			productReference = B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		B6554A4A1CC25F320060DC4B /* ActionClosurable-Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6554A651CC25F330060DC4B /* Build configuration list for PBXNativeTarget "ActionClosurable-Demo" */;
+			buildPhases = (
+				B6554A471CC25F320060DC4B /* Sources */,
+				B6554A481CC25F320060DC4B /* Frameworks */,
+				B6554A491CC25F320060DC4B /* Resources */,
+				B6554A6F1CC25FFC0060DC4B /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6554A6E1CC25FFC0060DC4B /* PBXTargetDependency */,
+			);
+			name = "ActionClosurable-Demo";
+			productName = "ActionClosurable-Demo";
+			productReference = B6554A4B1CC25F320060DC4B /* ActionClosurable-Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B6554A5D1CC25F330060DC4B /* ActionClosurable-DemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6554A681CC25F330060DC4B /* Build configuration list for PBXNativeTarget "ActionClosurable-DemoUITests" */;
+			buildPhases = (
+				B6554A5A1CC25F330060DC4B /* Sources */,
+				B6554A5B1CC25F330060DC4B /* Frameworks */,
+				B6554A5C1CC25F330060DC4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6554A601CC25F330060DC4B /* PBXTargetDependency */,
+			);
+			name = "ActionClosurable-DemoUITests";
+			productName = "ActionClosurable-DemoUITests";
+			productReference = B6554A5E1CC25F330060DC4B /* ActionClosurable-DemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -233,15 +266,19 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Yoshitaka Seki";
 				TargetAttributes = {
-					B61D459C1CBAB1AA00BCADB7 = {
-						CreatedOnToolsVersion = 7.3;
-					};
 					B61D45B01CBAB1AA00BCADB7 = {
 						CreatedOnToolsVersion = 7.3;
 						TestTargetID = B61D459C1CBAB1AA00BCADB7;
 					};
 					B6554A291CC24F3D0060DC4B = {
 						CreatedOnToolsVersion = 7.3;
+					};
+					B6554A4A1CC25F320060DC4B = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					B6554A5D1CC25F330060DC4B = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = B6554A4A1CC25F320060DC4B;
 					};
 				};
 			};
@@ -258,24 +295,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B61D459C1CBAB1AA00BCADB7 /* ActionClosurable-Demo */,
 				B61D45B01CBAB1AA00BCADB7 /* ActionClosurableTests */,
 				B6554A291CC24F3D0060DC4B /* ActionClosurable */,
+				B6554A4A1CC25F320060DC4B /* ActionClosurable-Demo */,
+				B6554A5D1CC25F330060DC4B /* ActionClosurable-DemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B61D459B1CBAB1AA00BCADB7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B61C4A6F1CC21BD600B81849 /* Main.storyboard in Resources */,
-				B61C4A6D1CC21BD600B81849 /* Assets.xcassets in Resources */,
-				B61C4A6E1CC21BD600B81849 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B61D45AF1CBAB1AA00BCADB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,18 +318,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		B61D45991CBAB1AA00BCADB7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+		B6554A491CC25F320060DC4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B61C4A6C1CC21BD600B81849 /* AppDelegate.swift in Sources */,
-				B61C4A701CC21BD600B81849 /* ViewController.swift in Sources */,
+				B6554A581CC25F320060DC4B /* LaunchScreen.storyboard in Resources */,
+				B6554A551CC25F320060DC4B /* Assets.xcassets in Resources */,
+				B6554A531CC25F320060DC4B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6554A5C1CC25F330060DC4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
 		B61D45AD1CBAB1AA00BCADB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,36 +355,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B6554A471CC25F320060DC4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6554A501CC25F320060DC4B /* ViewController.swift in Sources */,
+				B6554A4E1CC25F320060DC4B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6554A5A1CC25F330060DC4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6554A631CC25F330060DC4B /* ActionClosurable_DemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B61D45B31CBAB1AA00BCADB7 /* PBXTargetDependency */ = {
+		B6554A601CC25F330060DC4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B61D459C1CBAB1AA00BCADB7 /* ActionClosurable-Demo */;
-			targetProxy = B61D45B21CBAB1AA00BCADB7 /* PBXContainerItemProxy */;
+			target = B6554A4A1CC25F320060DC4B /* ActionClosurable-Demo */;
+			targetProxy = B6554A5F1CC25F330060DC4B /* PBXContainerItemProxy */;
 		};
-		B6554A301CC24F3D0060DC4B /* PBXTargetDependency */ = {
+		B6554A6E1CC25FFC0060DC4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B6554A291CC24F3D0060DC4B /* ActionClosurable */;
-			targetProxy = B6554A2F1CC24F3D0060DC4B /* PBXContainerItemProxy */;
+			targetProxy = B6554A6D1CC25FFC0060DC4B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B61C4A671CC21BD600B81849 /* LaunchScreen.storyboard */ = {
+		B6554A511CC25F320060DC4B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B61C4A681CC21BD600B81849 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		B61C4A691CC21BD600B81849 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B61C4A6A1CC21BD600B81849 /* Base */,
+				B6554A521CC25F320060DC4B /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B6554A561CC25F320060DC4B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B6554A571CC25F320060DC4B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -439,30 +492,6 @@
 			};
 			name = Release;
 		};
-		B61D45BB1CBAB1AA00BCADB7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = ActionClosurable/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = takasek.ActionClosurable;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B61D45BC1CBAB1AA00BCADB7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = ActionClosurable/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = takasek.ActionClosurable;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		B61D45BE1CBAB1AA00BCADB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -525,6 +554,52 @@
 			};
 			name = Release;
 		};
+		B6554A661CC25F330060DC4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "ActionClosurable-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takasek.ActionClosurable-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B6554A671CC25F330060DC4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = "ActionClosurable-Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takasek.ActionClosurable-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B6554A691CC25F330060DC4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ActionClosurable-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takasek.ActionClosurable-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ActionClosurable-Demo";
+			};
+			name = Debug;
+		};
+		B6554A6A1CC25F330060DC4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ActionClosurable-DemoUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takasek.ActionClosurable-DemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ActionClosurable-Demo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -533,15 +608,6 @@
 			buildConfigurations = (
 				B61D45B81CBAB1AA00BCADB7 /* Debug */,
 				B61D45B91CBAB1AA00BCADB7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B61D45BA1CBAB1AA00BCADB7 /* Build configuration list for PBXNativeTarget "ActionClosurable-Demo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B61D45BB1CBAB1AA00BCADB7 /* Debug */,
-				B61D45BC1CBAB1AA00BCADB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -563,6 +629,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B6554A651CC25F330060DC4B /* Build configuration list for PBXNativeTarget "ActionClosurable-Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6554A661CC25F330060DC4B /* Debug */,
+				B6554A671CC25F330060DC4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B6554A681CC25F330060DC4B /* Build configuration list for PBXNativeTarget "ActionClosurable-DemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6554A691CC25F330060DC4B /* Debug */,
+				B6554A6A1CC25F330060DC4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
