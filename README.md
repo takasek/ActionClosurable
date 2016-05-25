@@ -12,28 +12,29 @@ ActionClosurable extends `UIControl`, `UIButton`, `UIGestureRecognizer`, `UIBarB
 It helps writing swifty code with closure, instead of target and action like below:
 
 ```swift
-let barButtonItem = UIBarButtonItem(title: "title", style: .Plain, closure: { _ in
-    print("barButtonItem title")
-})
-
+// UIControl
 button.on(.TouchDown) {
     $0.backgroundColor = UIColor.redColor()
 }
 button.on(.TouchUpOutside) {
     $0.backgroundColor = UIColor.whiteColor()
 }
+// UIButton
 button.onTap {
     $0.enabled = false
-    print($0)
 }
 
-self.gr = UITapGestureRecognizer? = UITapGestureRecognizer()
-view.addGestureRecognizer(gr!)
-gr?.onGesture { [weak self] in
-    $0.removeTarget(nil, action: nil)
-    self?.gr = nil
-}
+// UIGestureRecognizer
+label.addGestureRecognizer(UIPanGestureRecognizer { gr in
+    print("UIPanGestureRecognizer fire")
+})
 
+// UIBarButtonItem
+let barButtonItem = UIBarButtonItem(title: "title", style: .Plain, closure: { _ in
+    print("barButtonItem title")
+})
+
+// NSTimer
 var i = 5
 self.timer = NSTimer.scheduledTimerWithTimeInterval(1, repeats: true) { [weak self] timer in
     print("timer", i)
@@ -44,6 +45,7 @@ self.timer = NSTimer.scheduledTimerWithTimeInterval(1, repeats: true) { [weak se
     }
 }
 
+// And you can easily extend any NSObject subclasses!
 ```
 
 And you can extend any NSObject subclasses in very easy way. [Refer to the source.](https://github.com/takasek/ActionClosurable/blob/master/ActionClosurable/Extensions.swift)
