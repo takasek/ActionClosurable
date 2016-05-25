@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "takasek" => "takassekiyoshi@gmail.com" }
   s.source           = { :git => "https://github.com/takasek/ActionClosurable.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/takasek'
+  s.social_media_url = 'https://twitter.com/takasek'
 
   s.ios.deployment_target = '8.0'
 
