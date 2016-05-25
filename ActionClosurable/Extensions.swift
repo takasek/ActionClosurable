@@ -31,6 +31,10 @@ extension ActionClosurable where Self: UIGestureRecognizer {
             self.addTarget($0, action: $1)
         }
     }
+    public init(closure: Self -> Void) {
+        self.init()
+        onGesture(closure)
+    }
 }
 
 extension ActionClosurable where Self: UIBarButtonItem {
