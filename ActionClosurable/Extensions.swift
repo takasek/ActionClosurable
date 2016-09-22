@@ -10,26 +10,26 @@ import UIKit
 
 extension ActionClosurable where Self: UIControl {
     public func on(_ controlEvents: UIControlEvents, closure: @escaping (Self) -> Void) {
-        register(closure: closure) {
+        convert(closure: closure, toConfiguration: {
             self.addTarget($0, action: $1, for: controlEvents)
-        }
+        })
     }
 }
 
 extension ActionClosurable where Self: UIButton {
     public func onTap(_ closure: @escaping (Self) -> Void) {
-        register(closure: closure) {
+        convert(closure: closure, toConfiguration: {
             self.addTarget($0, action: $1, for: .touchUpInside)
-        }
+        })
     }
 }
 
 
 extension ActionClosurable where Self: UIGestureRecognizer {
     public func onGesture(_ closure: @escaping (Self) -> Void) {
-        register(closure: closure) {
+        convert(closure: closure, toConfiguration: {
             self.addTarget($0, action: $1)
-        }
+        })
     }
     public init(closure: @escaping (Self) -> Void) {
         self.init()
@@ -51,10 +51,10 @@ extension ActionClosurable where Self: UIBarButtonItem {
         self.onTap(closure)
     }
     public func onTap(_ closure: @escaping (Self) -> Void) {
-        register(closure: closure) {
+        convert(closure: closure, toConfiguration: {
             self.target = $0
             self.action = $1
-        }
+        })
     }
 }
 
