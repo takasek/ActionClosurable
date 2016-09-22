@@ -1,6 +1,5 @@
 # ActionClosurable
 
-[![CI Status](http://img.shields.io/travis/Yoshitaka Seki/ActionClosurable.svg?style=flat)](https://travis-ci.org/Yoshitaka Seki/ActionClosurable)
 [![Version](https://img.shields.io/cocoapods/v/ActionClosurable.svg?style=flat)](http://cocoapods.org/pods/ActionClosurable)
 [![License](https://img.shields.io/cocoapods/l/ActionClosurable.svg?style=flat)](http://cocoapods.org/pods/ActionClosurable)
 [![Platform](https://img.shields.io/cocoapods/p/ActionClosurable.svg?style=flat)](http://cocoapods.org/pods/ActionClosurable)
@@ -8,15 +7,15 @@
 
 ## Usage
 
-ActionClosurable extends `UIControl`, `UIButton`, `UIGestureRecognizer`, `UIBarButtonItem` and `NSTimer`.
+ActionClosurable extends `UIControl`, `UIButton`, `UIGestureRecognizer` and `UIBarButtonItem`.
 It helps writing swifty code with closure, instead of target and action like below:
 
 ```swift
 // UIControl
-button.on(.TouchDown) {
+button.on(.touchDown) {
     $0.backgroundColor = UIColor.redColor()
 }
-button.on(.TouchUpOutside) {
+button.on(.touchUpOutside) {
     $0.backgroundColor = UIColor.whiteColor()
 }
 // UIButton
@@ -25,24 +24,13 @@ button.onTap {
 }
 
 // UIGestureRecognizer
-label.addGestureRecognizer(UIPanGestureRecognizer { gr in
+label.addGestureRecognizer(UIPanGestureRecognizer { (gr) in
     print("UIPanGestureRecognizer fire")
 })
 
 // UIBarButtonItem
-let barButtonItem = UIBarButtonItem(title: "title", style: .Plain, closure: { _ in
+let barButtonItem = UIBarButtonItem(title: "title", style: .plain) { _ in
     print("barButtonItem title")
-})
-
-// NSTimer
-var i = 5
-self.timer = NSTimer.scheduledTimerWithTimeInterval(1, repeats: true) { [weak self] timer in
-    print("timer", i)
-    i -= 1
-    if i <= 0 {
-        timer.invalidate()
-        self?.timer = nil
-    }
 }
 
 // And you can easily extend any NSObject subclasses!
@@ -52,6 +40,8 @@ And you can extend any NSObject subclasses in very easy way. [Refer to the sourc
 
 
 ## Installation
+
+### for Swift 3.0
 
 ActionClosurable is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -64,6 +54,12 @@ ActionClosurable is available through [Carthage](https://github.com/Carthage/Car
 ```ruby
 github "takasek/ActionClosurable"
 ```
+
+### for Swift 2.3
+
+take a look at the [`Swift-2.3` branch](https://github.com/takasek/ActionClosurable/tree/swift-2.3)
+
+
 
 ## Author
 
