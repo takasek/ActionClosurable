@@ -58,17 +58,3 @@ extension ActionClosurable where Self: UIBarButtonItem {
     }
 }
 
-extension ActionClosurable where Self: NSTimer {
-    public static func timerWithTimeInterval(ti: NSTimeInterval, repeats yesOrNo: Bool, closure: Self -> Void) -> Self {
-        return registerClosure(closure) {
-            let timer = Self.init(timeInterval: ti, target: $0, selector: $1, userInfo: nil, repeats: yesOrNo)
-            return timer
-        }
-    }
-    public static func scheduledTimerWithTimeInterval(ti: NSTimeInterval, repeats yesOrNo: Bool, closure: Self -> Void) -> Self {
-        let timer = timerWithTimeInterval(ti, repeats: yesOrNo, closure: closure)
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSDefaultRunLoopMode)
-        return timer
-    }
-}
-
