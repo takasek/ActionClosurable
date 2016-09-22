@@ -9,52 +9,52 @@
 import UIKit
 
 extension ActionClosurable where Self: UIControl {
-    public func on(controlEvents: UIControlEvents, closure: Self -> Void) {
-        registerClosure(closure) {
-            self.addTarget($0, action: $1, forControlEvents: controlEvents)
-        }
+    public func on(_ controlEvents: UIControlEvents, closure: @escaping (Self) -> Void) {
+        convert(closure: closure, toConfiguration: {
+            self.addTarget($0, action: $1, for: controlEvents)
+        })
     }
 }
 
 extension ActionClosurable where Self: UIButton {
-    public func onTap(closure: Self -> Void) {
-        registerClosure(closure) {
-            self.addTarget($0, action: $1, forControlEvents: .TouchUpInside)
-        }
+    public func onTap(_ closure: @escaping (Self) -> Void) {
+        convert(closure: closure, toConfiguration: {
+            self.addTarget($0, action: $1, for: .touchUpInside)
+        })
     }
 }
 
 
 extension ActionClosurable where Self: UIGestureRecognizer {
-    public func onGesture(closure: Self -> Void) {
-        registerClosure(closure) {
+    public func onGesture(_ closure: @escaping (Self) -> Void) {
+        convert(closure: closure, toConfiguration: {
             self.addTarget($0, action: $1)
-        }
+        })
     }
-    public init(closure: Self -> Void) {
+    public init(closure: @escaping (Self) -> Void) {
         self.init()
         onGesture(closure)
     }
 }
 
 extension ActionClosurable where Self: UIBarButtonItem {
-    public init(title: String, style: UIBarButtonItemStyle, closure: Self -> Void) {
+    public init(title: String, style: UIBarButtonItemStyle, closure: @escaping (Self) -> Void) {
         self.init()
         self.title = title
         self.style = style
         self.onTap(closure)
     }
-    public init(image: UIImage?, style: UIBarButtonItemStyle, closure: Self -> Void) {
+    public init(image: UIImage?, style: UIBarButtonItemStyle, closure: @escaping (Self) -> Void) {
         self.init()
         self.image = image
         self.style = style
         self.onTap(closure)
     }
-    public func onTap(closure: Self -> Void) {
-        registerClosure(closure) {
+    public func onTap(_ closure: @escaping (Self) -> Void) {
+        convert(closure: closure, toConfiguration: {
             self.target = $0
             self.action = $1
-        }
+        })
     }
 }
 
