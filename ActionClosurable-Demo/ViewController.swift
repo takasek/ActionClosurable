@@ -19,8 +19,8 @@ class ViewController: UIViewController {
 
         UIGraphicsBeginImageContextWithOptions(CGSize(width: 20, height: 20), false, 0)
         let contextImg = UIGraphicsGetCurrentContext()
-        CGContextSetRGBFillColor(contextImg,1,1,1,1)
-        CGContextFillRect(contextImg, CGRect(x: 0, y: 0, width: 20, height: 20))
+        CGContextSetRGBFillColor(contextImg!,1,1,1,1)
+        CGContextFillRect(contextImg!, CGRect(x: 0, y: 0, width: 20, height: 20))
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
@@ -60,16 +60,6 @@ class ViewController: UIViewController {
         label.addGestureRecognizer(UIPanGestureRecognizer { gr in
             print("UIPanGestureRecognizer fire")
         })
-
-        var i = 5
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, repeats: true) { [weak self] timer in
-            print("timer", i)
-            i -= 1
-            if i <= 0 {
-                timer.invalidate()
-                self?.timer = nil
-            }
-        }
     }
 }
 
