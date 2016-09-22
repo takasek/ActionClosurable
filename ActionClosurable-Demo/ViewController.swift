@@ -9,6 +9,19 @@
 import UIKit
 import ActionClosurable
 
+extension UIImage {
+    static func whiteImage() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: 20, height: 20), false, 0)
+        let contextImg = UIGraphicsGetCurrentContext()
+        CGContextSetRGBFillColor(contextImg!,1,1,1,1)
+        CGContextFillRect(contextImg!, CGRect(x: 0, y: 0, width: 20, height: 20))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image
+    }
+}
+
 class ViewController: UIViewController {
     var button: UIButton? = UIButton(frame: CGRect(x: 0,y: 70,width: 100,height: 100))
     var gr: UITapGestureRecognizer? = UITapGestureRecognizer()
@@ -17,18 +30,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: 20, height: 20), false, 0)
-        let contextImg = UIGraphicsGetCurrentContext()
-        CGContextSetRGBFillColor(contextImg!,1,1,1,1)
-        CGContextFillRect(contextImg!, CGRect(x: 0, y: 0, width: 20, height: 20))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
         navigationItem.rightBarButtonItems = [
             UIBarButtonItem(title: "title", style: .Plain, closure: { _ in
                 print("barButtonItem title")
             }),
-            UIBarButtonItem(image: image, style: .Plain, closure: { _ in
+            UIBarButtonItem(image: UIImage.whiteImage(), style: .Plain, closure: { _ in
                 print("barButtonItem image")
             }),
         ]
