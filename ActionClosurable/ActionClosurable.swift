@@ -9,19 +9,19 @@
 import Foundation
 
 public class Actor<T> {
-    @objc func act(sender: AnyObject) { closure(sender as! T) }
-    private let closure: T -> Void
-    init(_ closure: T -> Void) {
+    @objc func act(_ sender: AnyObject) { closure(sender as! T) }
+    fileprivate let closure: (T) -> Void
+    init(acts closure: @escaping (T) -> Void) {
         self.closure = closure
     }
 }
 
 private class GreenRoom {
-    private var actors: [Any] = []
+    fileprivate var actors: [Any] = []
 }
 private var GreenRoomKey: UInt32 = 893
 
-func register<T>(actor: Actor<T>, to object: AnyObject) {
+private func _register<T>(_ actor: Actor<T>, to object: AnyObject) {
     let room = objc_getAssociatedObject(object, &GreenRoomKey) as? GreenRoom ?? {
         let room = GreenRoom()
         objc_setAssociatedObject(object, &GreenRoomKey, room, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -32,15 +32,15 @@ func register<T>(actor: Actor<T>, to object: AnyObject) {
 
 public protocol ActionClosurable {}
 public extension ActionClosurable where Self: AnyObject {
-    public func registerClosure(closure: Self -> Void, @noescape configure: (Actor<Self>, Selector) -> Void) {
-        let actor = Actor(closure)
+    public func register(closure: @escaping (Self) -> Void, configure: (Actor<Self>, Selector) -> Void) {
+        let actor = Actor(acts: closure)
         configure(actor, #selector(Actor<AnyObject>.act(_:)))
-        register(actor, to: self)
+        _register(actor, to: self)
     }
-    public static func registerClosure(closure: Self -> Void, @noescape configure: (Actor<Self>, Selector) -> Self) -> Self {
-        let actor = Actor(closure)
+    public static func register(closure: @escaping (Self) -> Void, configure: (Actor<Self>, Selector) -> Self) -> Self {
+        let actor = Actor(acts: closure)
         let instance = configure(actor, #selector(Actor<AnyObject>.act(_:)))
-        register(actor, to: instance)
+        _register(actor, to: instance)
         return instance
     }
 }
