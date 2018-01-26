@@ -50,6 +50,10 @@ extension ActionClosurable where Self: UIBarButtonItem {
         self.style = style
         self.onTap(closure)
     }
+    public init(barButtonSystemItem: UIBarButtonSystemItem, closure: @escaping (Self) -> Void) {
+        self.init(barButtonSystemItem: barButtonSystemItem, target: nil, action: nil)
+        self.onTap(closure)
+    }
     public func onTap(_ closure: @escaping (Self) -> Void) {
         convert(closure: closure, toConfiguration: {
             self.target = $0
