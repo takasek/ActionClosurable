@@ -18,9 +18,7 @@ extension ActionClosurable where Self: UIControl {
 
 extension ActionClosurable where Self: UIButton {
     public func onTap(_ closure: @escaping (Self) -> Void) {
-        convert(closure: closure, toConfiguration: {
-            self.addTarget($0, action: $1, for: .touchUpInside)
-        })
+        on(.touchUpInside, closure: closure)
     }
 }
 
