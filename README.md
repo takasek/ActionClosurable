@@ -7,7 +7,7 @@
 
 ## Usage
 
-ActionClosurable extends `UIControl`, `UIButton`, `UIGestureRecognizer` and `UIBarButtonItem`.
+ActionClosurable extends `UIControl`, `UIButton`, `UIRefreshControl`, `UIGestureRecognizer` and `UIBarButtonItem`.
 It helps writing swifty code with closure, instead of target and action like below:
 
 ```swift
@@ -21,6 +21,13 @@ button.on(.touchUpOutside) {
 // UIButton
 button.onTap {
     $0.enabled = false
+}
+
+// UIRefreshControl
+tableView.refreshControl = UIRefreshControl { refreshControl in
+    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        refreshControl.endRefreshing()
+    }
 }
 
 // UIGestureRecognizer
@@ -41,8 +48,6 @@ And you can extend any NSObject subclasses in very easy way. [Refer to the sourc
 
 ## Installation
 
-### for Swift 3.0
-
 ActionClosurable is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -54,12 +59,6 @@ ActionClosurable is available through [Carthage](https://github.com/Carthage/Car
 ```ruby
 github "takasek/ActionClosurable"
 ```
-
-### for Swift 2.3
-
-take a look at the [`Swift-2.3` branch](https://github.com/takasek/ActionClosurable/tree/swift-2.3)
-
-
 
 ## Author
 
