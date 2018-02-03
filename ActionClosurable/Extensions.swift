@@ -18,9 +18,18 @@ extension ActionClosurable where Self: UIControl {
 
 extension ActionClosurable where Self: UIButton {
     public func onTap(_ closure: @escaping (Self) -> Void) {
-        convert(closure: closure, toConfiguration: {
-            self.addTarget($0, action: $1, for: .touchUpInside)
-        })
+        on(.touchUpInside, closure: closure)
+    }
+}
+
+public extension ActionClosurable where Self: UIRefreshControl {
+    public func onValueChanged(closure: @escaping (Self) -> Void) {
+        on(.valueChanged, closure: closure)
+    }
+
+    public init(closure: @escaping (Self) -> Void) {
+        self.init()
+        onValueChanged(closure: closure)
     }
 }
 
@@ -61,4 +70,3 @@ extension ActionClosurable where Self: UIBarButtonItem {
         })
     }
 }
-
