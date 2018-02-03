@@ -22,6 +22,17 @@ extension ActionClosurable where Self: UIButton {
     }
 }
 
+public extension ActionClosurable where Self: UIRefreshControl {
+    public func onValueChanged(closure: @escaping (Self) -> Void) {
+        on(.valueChanged, closure: closure)
+    }
+
+    public init(closure: @escaping (Self) -> Void) {
+        self.init()
+        onValueChanged(closure: closure)
+    }
+}
+
 
 extension ActionClosurable where Self: UIGestureRecognizer {
     public func onGesture(_ closure: @escaping (Self) -> Void) {
@@ -59,4 +70,3 @@ extension ActionClosurable where Self: UIBarButtonItem {
         })
     }
 }
-
