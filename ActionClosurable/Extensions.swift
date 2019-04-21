@@ -9,7 +9,7 @@
 import UIKit
 
 extension ActionClosurable where Self: UIControl {
-    public func on(_ controlEvents: UIControlEvents, closure: @escaping (Self) -> Void) {
+    public func on(_ controlEvents: UIControl.Event, closure: @escaping (Self) -> Void) {
         convert(closure: closure, toConfiguration: {
             self.addTarget($0, action: $1, for: controlEvents)
         })
@@ -23,11 +23,11 @@ extension ActionClosurable where Self: UIButton {
 }
 
 public extension ActionClosurable where Self: UIRefreshControl {
-    public func onValueChanged(closure: @escaping (Self) -> Void) {
+    func onValueChanged(closure: @escaping (Self) -> Void) {
         on(.valueChanged, closure: closure)
     }
 
-    public init(closure: @escaping (Self) -> Void) {
+    init(closure: @escaping (Self) -> Void) {
         self.init()
         onValueChanged(closure: closure)
     }
@@ -47,19 +47,19 @@ extension ActionClosurable where Self: UIGestureRecognizer {
 }
 
 extension ActionClosurable where Self: UIBarButtonItem {
-    public init(title: String, style: UIBarButtonItemStyle, closure: @escaping (Self) -> Void) {
+    public init(title: String, style: UIBarButtonItem.Style, closure: @escaping (Self) -> Void) {
         self.init()
         self.title = title
         self.style = style
         self.onTap(closure)
     }
-    public init(image: UIImage?, style: UIBarButtonItemStyle, closure: @escaping (Self) -> Void) {
+    public init(image: UIImage?, style: UIBarButtonItem.Style, closure: @escaping (Self) -> Void) {
         self.init()
         self.image = image
         self.style = style
         self.onTap(closure)
     }
-    public init(barButtonSystemItem: UIBarButtonSystemItem, closure: @escaping (Self) -> Void) {
+    public init(barButtonSystemItem: UIBarButtonItem.SystemItem, closure: @escaping (Self) -> Void) {
         self.init(barButtonSystemItem: barButtonSystemItem, target: nil, action: nil)
         self.onTap(closure)
     }

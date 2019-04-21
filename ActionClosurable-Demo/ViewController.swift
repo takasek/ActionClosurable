@@ -37,7 +37,7 @@ class ViewController: UIViewController {
                 print("barButtonItem image")
             }),
         ]
-        button?.setTitle("button", for: UIControlState())
+        button?.setTitle("button", for: UIControl.State())
         button?.backgroundColor = UIColor.red
         self.view.addSubview(button!)
 
