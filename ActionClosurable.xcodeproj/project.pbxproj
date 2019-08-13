@@ -67,6 +67,7 @@
 		B6554A541CC25F320060DC4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6554A571CC25F320060DC4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6554A591CC25F320060DC4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6E9AC782302EAFF006B49C5 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		B61D45941CBAB1AA00BCADB7 = {
 			isa = PBXGroup;
 			children = (
+				B6E9AC782302EAFF006B49C5 /* Package.swift */,
 				B61D45B41CBAB1AA00BCADB7 /* ActionClosurableTests */,
 				B6554A2B1CC24F3D0060DC4B /* ActionClosurable */,
 				B6554A4C1CC25F320060DC4B /* ActionClosurable-Demo */,
