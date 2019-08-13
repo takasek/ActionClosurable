@@ -60,6 +60,18 @@ ActionClosurable is available through [Carthage](https://github.com/Carthage/Car
 github "takasek/ActionClosurable"
 ```
 
+ActionClosurable is available through [Swift Package Manager](https://github.com/apple/swift-package-manager). To install it, add dependency in `Package.swift`:
+
+```swift
+let package = Package(
+    ...
+    dependencies: [
+         .package(url: "git@github.com:takasek/ActionClosurable.git", from: "2.1.0"),
+    ],
+    ...
+)
+```
+
 ## Author
 
 [takasek](https://twitter.com/takasek)
