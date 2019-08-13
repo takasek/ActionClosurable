@@ -10,7 +10,7 @@
 		B61D45B61CBAB1AA00BCADB7 /* ActionClosurableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45B51CBAB1AA00BCADB7 /* ActionClosurableTests.swift */; };
 		B6554A2D1CC24F3D0060DC4B /* ActionClosurable.h in Headers */ = {isa = PBXBuildFile; fileRef = B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6554A3D1CC258010060DC4B /* ActionClosurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */; };
-		B6554A3E1CC258080060DC4B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C61CBB45D000BCADB7 /* Extensions.swift */; };
+		B6554A3E1CC258080060DC4B /* Extensions_UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D45C61CBB45D000BCADB7 /* Extensions_UIKit.swift */; };
 		B6554A4E1CC25F320060DC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6554A4D1CC25F320060DC4B /* AppDelegate.swift */; };
 		B6554A501CC25F320060DC4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6554A4F1CC25F320060DC4B /* ViewController.swift */; };
 		B6554A531CC25F320060DC4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6554A511CC25F320060DC4B /* Main.storyboard */; };
@@ -57,7 +57,7 @@
 		B61D45B51CBAB1AA00BCADB7 /* ActionClosurableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionClosurableTests.swift; sourceTree = "<group>"; };
 		B61D45B71CBAB1AA00BCADB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionClosurable.swift; sourceTree = "<group>"; };
-		B61D45C61CBB45D000BCADB7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B61D45C61CBB45D000BCADB7 /* Extensions_UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions_UIKit.swift; sourceTree = "<group>"; };
 		B6554A2A1CC24F3D0060DC4B /* ActionClosurable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionClosurable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionClosurable.h; sourceTree = "<group>"; };
 		B6554A4B1CC25F320060DC4B /* ActionClosurable-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ActionClosurable-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B61D45C01CBB30D100BCADB7 /* ActionClosurable.swift */,
-				B61D45C61CBB45D000BCADB7 /* Extensions.swift */,
+				B61D45C61CBB45D000BCADB7 /* Extensions_UIKit.swift */,
 				B61D45AC1CBAB1AA00BCADB7 /* Info.plist */,
 				B6554A2C1CC24F3D0060DC4B /* ActionClosurable.h */,
 			);
@@ -302,7 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6554A3D1CC258010060DC4B /* ActionClosurable.swift in Sources */,
-				B6554A3E1CC258080060DC4B /* Extensions.swift in Sources */,
+				B6554A3E1CC258080060DC4B /* Extensions_UIKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
