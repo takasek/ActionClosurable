@@ -27,5 +27,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ActionClosurable/*.swift'
+  s.swift_version    = "4.2"
 
 end
