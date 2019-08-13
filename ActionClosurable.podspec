@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ActionClosurable"
-  s.version          = "1.3.0"
+  s.version          = "2.0.0"
   s.summary          = "Extensions which helps to convert swifty closure to objc-style target/action."
 
 # This description is used to generate tags and improve search results.
@@ -26,6 +26,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ActionClosurable/*.swift'
-  s.swift_version    = "4.2"
+  s.swift_version    = "5.0"
 
 end
